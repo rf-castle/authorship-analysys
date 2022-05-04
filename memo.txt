@@ -1,0 +1,8 @@
+文書ファイルを読み込んで変数textに格納する
+textをnltk.word_tokenize()にかけて単語のリストword_listを作る
+nltk.corpusから正しい単語のリストwordsをインポートしてcorrect_wordsに格納する
+変数countを0に初期化する
+word_listの単語ひとつひとつに対してcorrect_wordsに一致するものがあるか確認する
+一致したら、countを1増加する。
+word_listの要素数に対するincorrectの比率で確認する。
+
