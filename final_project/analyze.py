@@ -53,6 +53,14 @@ def create_bigram_freqdist(tweets: typing.Iterator[TweetData], tokenizer: Tokeni
 def logic(author: str):
     pass
 
+def count_token():
+    with open("katyperry_known.csv", "rt") as f1, open("justinbieber_known.csv", "rt") as f2:
+        tweets1 = list(read_csv(f1))
+        tweets2 = list(read_csv(f2))
+    count1 = len([to_unigrams(t) for t in tweets1])
+    count2 = len([to_unigrams(t) for t in tweets2])
+    print(count1, count2)
+
 def main():
     nltk.download('punkt')
     tt = TweetTokenizer()
@@ -96,7 +104,6 @@ def main():
 
     # bigram見ていって、頻度と比べてみてどっちが近いか的な
 
+# ロジック変えたい場合はここ
 if __name__ == "__main__":
     main()
-
-# nltk UnigramTagger
